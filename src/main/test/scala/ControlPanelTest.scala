@@ -7,18 +7,18 @@ class ControlPanelTest extends AnyFunSpec {
   describe("A ControlPanel") {
     describe("when no instructions, nothing in output") {
       val controlPanel = new ControlPanel()
-      controlPanel.run(List()) shouldBe Right()
+      controlPanel.run(List())
       controlPanel.outputFor(0) shouldBe None
     }
     describe("when instructions are not empty") {
       it("should correctly put chips to outputs") {
         val controlPanel = new ControlPanel()
-        controlPanel.run(instructions) shouldBe Right()
+        controlPanel.run(instructions)
         controlPanel.outputFor(0) shouldBe Some(List(1))
         controlPanel.outputFor(1) shouldBe Some(List(2))
       }
 
-      it("should return correct results if instructions from the example") {
+      it("should return correct results for instructions from the example") {
         //    value 5 goes to bot 2
         //    bot 2 gives low to bot 1 and high to bot 0
         //    value 3 goes to bot 1
@@ -29,7 +29,7 @@ class ControlPanelTest extends AnyFunSpec {
         // and output bin 2 contains a value-3 microchip. In this configuration, bot number 2 is responsible
         // for comparing value-5 microchips with value-2 microchips.
         val controlPanel = new ControlPanel()
-        controlPanel.run(instructions2) shouldBe Right()
+        controlPanel.run(instructions2)
         controlPanel.outputFor(0) shouldBe Some(List(5))
         controlPanel.outputFor(1) shouldBe Some(List(2))
         controlPanel.outputFor(2) shouldBe Some(List(3))
