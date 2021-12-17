@@ -4,9 +4,10 @@ Although the problem is not very complex, I tried to approach it like an actual 
 The goal was code and logic should be readable and are open to changes and extensions.
 Also, I added some unit tests as I would in the real case; this also helped me to develop the solution
 
-Solution for the (assignment)[assignment.csv]. The input file is located in (input.txt)[src/main/resources/input.txt]
+Solution for the [assignment](assignment.csv). The input file is located in [input.txt](src/main/resources/input.txt)
 
-To Run the solution
+To Run the solution:
+
 ```
    sbt "runMain Main"
 ```
